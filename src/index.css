@@ -1,13 +1,158 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  font-family: "Montserrat", sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  padding: 5vh 5vw;
+  background: #0f0c29; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #24243e,
+    #302b63,
+    #0f0c29
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #24243e,
+    #302b63,
+    #0f0c29
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+form {
+  color: white;
+  padding: 0px 5vw;
+}
+
+input {
+  width: 50%;
+  font-size: 1.2rem;
+  color: gray;
+  border-radius: 25px;
+}
+
+h2 {
+  font-weight: 600;
+  color: white;
+  font-size: 3em;
+}
+
+h3 {
+  font-weight: 400;
+  color: white;
+}
+
+.main-container {
+  text-align: center;
+}
+
+.gif-grid {
+  text-align: left;
+}
+
+.card {
+  align-content: center;
+  box-shadow: 0px 0px 5px rgb(63, 63, 63);
+  background-color: white;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  border-radius: 15px;
+  overflow: hidden;
+  flex-grow: 1;
+  width: 19%;
+  text-overflow: ellipsis;
+  max-height: 300px;
+  text-align: center;
+  transition: all ease 0.4s;
+}
+
+.card:hover {
+  margin-top: -5px;
+}
+
+.card:hover button {
+  border-color: #2e2960;
+  color: #2e2960;
+}
+
+.card:hover img {
+    
+  filter: grayscale(0%);
+}
+
+ol {
+  margin: 0px;
+  padding: 0px;
+}
+
+.card p {
+  padding: 0px 8%;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: 80%;
+}
+
+.card button {
+  margin: 0px 0px 15px 0px;
+  background-color: transparent;
+  border-radius: 5px;
+  border: 2px solid #908ad1;
+  color: #908ad1;
+  font-weight: 600;
+  padding: 3px 10px;
+  transition: all ease 0.4s;
+}
+
+.card button:hover {
+  background-color: #2e2960;
+  border-radius: 5px;
+  border: 2px solid #2e2960;
+  color: white;
+}
+
+.img-container {
+  width: 100%;
+  max-height: 200px;
+  height: 200px;
+  overflow: hidden;
+  display: flex;
+}
+
+.img-container img {
+  width: 100%;
+  filter: grayscale(70%);
+  transition: all ease-out .4s;
+}
+
+.card-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.loading-gif {
+  width: 10vw;
+  position: absolute;
+  left: 45%;
+  top: 45%;
+  z-index: 10;
+}
+
+@media screen and (max-width: 992px) {
+  .card {
+    width: 33%;
+  }
+  input {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .card {
+    width: 100%;
+  }
+  input {
+    width: 100%;
+  }
 }
